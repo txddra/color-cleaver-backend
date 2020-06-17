@@ -1,5 +1,19 @@
+//path to the file
 const colorCombinator = require('./color-combinator.js')
 const colorDeconstructor = require('./color-deconstructor.js')
+
+//gets users age from the console
+
+let color = getInput(0)
+let color2 = getInput(1)
+
+//get a message based on that age from the back end
+const combined = colorCombinator(color, color2)
+
+//print it out for user
+console.log(combined)
+
+
 
 describe('colorCombinator', () => {
   it(`returns the combination of the two given colors`, () => {
@@ -37,3 +51,6 @@ describe('colorDeconstructor', () => {
     expect(colorDeconstructor('black')).toBe("Sorry, that's not a secondary color!");
   })
 })
+function getInput(i) {
+  return process.argv[i + 2];
+}
