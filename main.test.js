@@ -5,17 +5,17 @@ const colorDeconstructor = require('./color-deconstructor.js')
 //gets users age from the console
 
 //combinator
-let color = getInput(0)
-let color2 = getInput(1)
+let primary = getInput(0)
+let primary2 = getInput(1)
 //deconstructor
-let solo = getInput(0)
+let secondary = getInput(0)
 
 //get a message based on that age from the back end
 
 //combinator
-const combined = colorCombinator(color, color2)
+const combined = colorCombinator(primary, primary2)
 //deconstructor
-const deconstucted = colorDeconstructor(solo)
+const deconstucted = colorDeconstructor(secondary)
 
 //print it out for user
 
